@@ -9,15 +9,12 @@
     display: grid;
     place-items: center;
     overflow: hidden;
-    background-color: yellow;
   }
   
   main {
     position: relative;
-    max-width: 900px; /* Set a maximum width for the layout */
     width: 100%;
     height: 100%;
-    margin: 0 auto; /* Center the layout horizontally */
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
   }
   
@@ -125,4 +122,36 @@
     }
   }
   
- 
+  @media (width > 650px) and (width < 900px) {
+    .content {
+      & .title        { font-size: 1rem; }
+      & .description  { font-size: 0.7rem; }
+      & button        { font-size: 0.7rem; }
+    }
+    .item {
+      width: 160px;
+      height: 270px;
+  
+      &:nth-child(3) { left: 50%; }
+      &:nth-child(4) { left: calc(50% + 170px); }
+      &:nth-child(5) { left: calc(50% + 340px); }
+      &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+    }
+  }
+  
+  @media (width < 650px) {
+    .content {
+      & .title        { font-size: 0.9rem; }
+      & .description  { font-size: 0.65rem; }
+      & button        { font-size: 0.7rem; }
+    }
+    .item {
+      width: 130px;
+      height: 220px;
+  
+      &:nth-child(3) { left: 50%; }
+      &:nth-child(4) { left: calc(50% + 140px); }
+      &:nth-child(5) { left: calc(50% + 280px); }
+      &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+    }
+  }
