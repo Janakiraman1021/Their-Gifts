@@ -132,8 +132,7 @@
       & button        { font-size: 0.7rem; }
     }
     .item {
-      width: 160px;
-      height: 270px;
+;
   
       &:nth-child(3) { left: 50%; }
       &:nth-child(4) { left: calc(50% + 170px); }
