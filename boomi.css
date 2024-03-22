@@ -37,6 +37,30 @@ body {
   box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
 }
 
+.card1 {
+    position: relative;
+    height: 655px;
+    width: 900px;
+    margin: 200px auto;
+    background-color: #FFF;
+    -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .thumbnail1 {
+    float: left;
+    position: relative;
+    left: 30px;
+    top: -30px;
+    height: 700px;
+    width: 530px;
+    -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+  }
+
 /* Image on the left side */
 .thumbnail {
   float: left;
