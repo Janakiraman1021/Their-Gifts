@@ -61,6 +61,19 @@ body {
     overflow: hidden;
   }
 
+  .thumbnail2 {
+    float: left;
+    position: relative;
+    left: 30px;
+    top: -30px;
+    height: 510px;
+    width: 530px;
+    -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+  }
+
 /* Image on the left side */
 .thumbnail {
   float: left;
