@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boomica 💛</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vid.css">
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex flex-col min-h-screen">
+        <!-- Navigation bar -->
+        <nav class="bg-gray-900 text-gray-100 p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="h-6 w-6 text-red-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                    <span class="ml-2 font-semibold">B-Tube</span>
+                </div>
+                <div class="flex items-center">
+                    <input type="text" placeholder="Search"
+                        class="bg-gray-800 text-gray-100 rounded-l-lg px-4 py-2 focus:outline-none">
+                    <button class="bg-red-500 text-gray-100 px-4 py-2 rounded-r-lg">Search</button>
+                </div>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <div class="flex flex-col flex-grow container mx-auto mt-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Video player -->
+                <div class="col-span-2">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <video id="mainVideo" class="w-full h-350" controls>
+                            <source src="./VID1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h2 class="text-lg font-semibold mt-4">Happy Birthday Boomica ! 💛💛💛</h2>
+                    <p class="text-gray-600">Created By Ram For You </p>
+                    <p class="text-gray-600"> <strong> 2 views </strong> one by me and one by you · <br> 27 May 2024</p>
+                </div>
+                <!-- Sidebar -->
+                <div class="md:col-span-1">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h2 class="text-lg font-semibold mb-2">Up next</h2>
+                        <ul id="upNextList">
+                            <li data-src="./vid2.mp4" class="flex items-center mb-2 up-next-item">
+                                <img src="./icon/BOO/8.jpg" alt="Video thumbnail" class="w-12 h-12 rounded-lg mr-2">
+                                <div>
+                                    <h3 class="font-semibold">Video 2</h3>
+                                </div>
+                            </li>
+                            <li data-src="./vid3.mp4" class="flex items-center mb-2 up-next-item">
+                                <img src="./icon/BOO/19.jpg" alt="Video thumbnail" class="w-12 h-12 rounded-lg mr-2">
+                                <div>
+                                    <h3 class="font-semibold">Video 3</h3>
+                                </div>
+                            </li>
+                            <!-- More video items here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment Section -->
+        <div class="mt-8">
+            <h2 class="text-lg font-semibold mb-4">Comments</h2>
+            <div class="bg-white p-4 rounded shadow">
+                <!-- Sample Comment -->
+                <div class="flex items-start mb-4">
+                    <img src="https://via.placeholder.com/40" alt="User" class="w-10 h-10 rounded-full mr-2">
+                    <div>
+                        <h3 class="font-semibold">JR</h3>
+                        <p class="text-gray-600"> Happy Birthday, Boomica! 🎉💛 On your special day,
+                            I wish you all the love, happiness, and joy in the world.
+                            May your day be as beautiful and radiant as you are.
+                            Cheers to another amazing year ahead filled with unforgettable moments and endless love.
+                            I feel so grateful to have you in my life.
+                            Here's to many more birthdays together. Love you always! 💕
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start mb-4">
+                    <img src="https://via.placeholder.com/40" alt="User" class="w-10 h-10 rounded-full mr-2">
+                    <div>
+                        <h3 class="font-semibold">Ram</h3>
+                        <p class="text-gray-600"> Happy Birthday, Boomica! 🎉💛 Your radiant smile lights up my world,
+                            and on your special day, I wish you nothing but happiness, love,
+                            and joy. May this year be as bright and beautiful as you are.
+                            Here's to creating more cherished memories and sharing countless laughs together.
+                            I'm so grateful to have you in my life. Cheers to you, my dear friend! 🌟🎂💕
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start mb-4">
+                    <img src="https://via.placeholder.com/40" alt="User" class="w-10 h-10 rounded-full mr-2">
+                    <div>
+                        <h3 class="font-semibold">JanakiRaman</h3>
+                        <p class="text-gray-600"> Today marks another milestone in the journey of life, a day to
+                            celebrate the beauty, grace, and kindness
+                            that is you, Boomica. As you reflect on the past and look forward to the future, may your
+                            heart be filled
+                            with warmth and your path be lined with joy. Here's to the adventures we've shared and the
+                            ones yet to come.
+                            You are truly special, and I feel blessed to have you in my life. Wishing you a day as
+                            wonderful as you are!
+                            💛🎉
+
+                        </p>
+                    </div>
+                </div>
+                <!-- More comments here -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-gray-100 p-4">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 Made For you By Ram </p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const upNextItems = document.querySelectorAll('.up-next-item');
+
+        upNextItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const videoSrc = item.getAttribute('data-src');
+                document.getElementById('mainVideo').src = videoSrc;
+                document.getElementById('mainVideo').play();
+            });
+        });
+    </script>
+</body>
+
+</html>

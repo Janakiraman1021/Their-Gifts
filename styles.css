@@ -155,3 +155,9 @@
       &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
     }
   }
+
+  
+  .h-350 {
+    height: 650px;
+    width: 1000px;
+}
