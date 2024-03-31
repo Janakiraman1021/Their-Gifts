@@ -1,61 +1,47 @@
 <!DOCTYPE html>
-<html>
-<head>
-<link href="suprise.css" rel="stylesheet" media="screen">
-<style>
-  body{background-color:#A2A2A2;}
-  #demo1{display:block; height:400px; margin: 10px auto 100px;}
-  #demo2{display:block; height:400px; margin: 100px auto;}
-  h1.desc {
-    background-color: #FFF;
-    border: 2px solid #2D2D2D;
-    padding: 10px;
-    color: #FF6719;
-  }
-  #demo1-desc h1:not(:first-child){display:none;}
-  #demo2 img {filter: grayscale(0); -webkit-filter: grayscale(0);-moz-filter: grayscale(0); -ms-filter: grayscale(0);-o-filter: grayscale(0);}
-</style>
-</head>
-<body>
-<div id="demo1-desc">
-   <h1 class="desc" id="slide0">I am slide 1</h1>
-   <h1 class="desc" id="slide1">I am slide 2</h1>
-   <h1 class="desc" id="slide2">I am slide 3</h1>
-   <h1 class="desc" id="slide3">I am slide 4</h1>
-   <h1 class="desc" id="slide4">I am slide 5</h1>
-   <h1 class="desc" id="slide5">I am slide 6</h1>
-   <h1 class="desc" id="slide6">I am slide 7</h1>
-</div>
-<div class="skd-carousel" id="demo1">
-  <img src="images/1.jpg" />
-  <img src="images/2.jpg" />
-  <img src="images/3.jpg" />
-  <img src="images/4.jpg" />
-  <img src="images/5.jpg" />
-  <img src="images/6.jpg" />
-  <img src="images/7.jpg" />
-</div>
+<html lang="en">
 
-<div class="skd-carousel" id="demo2">
-  <img src="images/1.jpg" />
-  <img src="images/2.jpg" />
-  <img src="images/3.jpg" />
-  <img src="images/4.jpg" />
-  <img src="images/5.jpg" />
-  <img src="images/6.jpg" />
-  <img src="images/7.jpg" />
-</div>
-<script src="suprise.js"></script>
-<script type="text/javascript">
-  new SKDCarousel({selector:'demo1'}).onCenter(function(number){
-     var descs = document.querySelectorAll('h1.desc'); 
-     for(var i=0;i<descs.length;i++) {
-       descs[i].style.display='none'; 
-     } 
-     document.getElementById('slide'+number).style.display = 'block';
-  });
-  
-  new SKDCarousel({selector:'demo2', width:200, height:200, auto:true});
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Photo Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Style the gallery grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Style the gallery image */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect on gallery image */
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="gallery">
+            <img src="https://via.placeholder.com/200" alt="Image 1">
+            <img src="https://via.placeholder.com/200" alt="Image 2">
+            <img src="https://via.placeholder.com/200" alt="Image 3">
+            <img src="https://via.placeholder.com/200" alt="Image 4">
+            <img src="https://via.placeholder.com/200" alt="Image 5">
+            <img src="https://via.placeholder.com/200" alt="Image 6">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
 </body>
+
 </html>
