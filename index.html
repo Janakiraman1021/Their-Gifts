@@ -37,7 +37,7 @@
 
     .active {
       border-bottom: 2px solid #bf00ff;
-      
+
     }
 
     .nonactive {
@@ -229,16 +229,31 @@
       <span>password</span><br>
       <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
       <label for="checkbox-1-1">Keep me Signed in</label><br>
-      <button class="signin" onclick="validateForm()">Lets Enter</button>
+      <a class="signin" onclick="validateForm()">Lets Enter</a>
       <hr>
-      <a  class="sign">Forgot Password?</a>
+      <a class="sign">Forgot Password?</a>
     </form>
   </div>
   <span class="heart heart1">💛</span>
   <span class="heart heart2">💛</span>
   <span class="heart heart3">💛</span>
   <!-- Add more hearts as needed-->
-  <script src="index.js"></script>
+  <script>
+    function validateForm() {
+      var username = document.getElementById("uname").value;
+      var password = document.getElementById("pass").value;
+
+      // Check if username and password match the given values
+      if (username == "boomica19@birthday.com" && (password == 270505 || password == "27505")) {
+        alert("Login successful! Now You will be redirected to the Choice of Gifts Page ");
+        window.location.href = "choice.html";
+        return false; // Prevent form submission
+      } else {
+        alert("Incorrect username or password. Please try again.");
+        return false; // Prevent form submission
+      }
+    }
+  </script>
 
 </body>
 
