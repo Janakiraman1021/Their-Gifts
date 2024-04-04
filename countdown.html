@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Happy Birthday</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #ffcc00; /* Dark yellow background */
+            background-image: url('https://www.transparenttextures.com/patterns/geometry.png');
+            animation: backgroundAnimation 10s infinite alternate;
+            background-size: cover;
+            background-blend-mode: overlay;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        .countdown {
+            font-size: 3rem;
+            color: #000; /* Black text */
+        }
+
+        .message {
+            font-size: 1.5rem;
+            color: #000; /* Black text */
+            margin-top: 1rem;
+        }
+
+        /* Heart animation */
+        @keyframes heartBeat {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .heart {
+            color: #ff69b4; /* Pink heart color */
+            animation: heartBeat 1s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="text-5xl font-bold mb-4">Advance Happy Birthday Boomica💛 </h1>
+            <div id="countdown" class="countdown"></div>
+            <div class="message">To Go  </div>
+        </div>
+    </div>
+
+    <script>
+        // Countdown function
+        function countdown() {
+            const countdownDate = new Date('May 27, 2024 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(interval);
+                document.getElementById('countdown').innerHTML = 'EXPIRED';
+            }
+        }
+
+        // Initial call to start the countdown
+        countdown();
+
+        // Update the countdown every second
+        const interval = setInterval(countdown, 1000);
+    </script>
+</body>
+
+</html>
