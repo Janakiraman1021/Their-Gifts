@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/vid.html"
+    "livePreview.defaultPreviewPath": "/vid.html",
+    "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }
