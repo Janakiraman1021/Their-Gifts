@@ -39,8 +39,19 @@ body {
 
 .card1 {
     position: relative;
-    height: 655px;
+    height: 500px;
     width: 900px;
+    margin: 200px auto;
+    background-color: #FFF;
+    -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .card2 {
+    position: relative;
+    height: 800px;
+    width: 1000px;
     margin: 200px auto;
     background-color: #FFF;
     -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
@@ -53,7 +64,7 @@ body {
     position: relative;
     left: 30px;
     top: -30px;
-    height: 700px;
+    height: 400px;
     width: 530px;
     -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
@@ -65,8 +76,8 @@ body {
     float: left;
     position: relative;
     left: 30px;
-    top: -30px;
-    height: 510px;
+    top: -10px;
+    height: 800px;
     width: 530px;
     -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
